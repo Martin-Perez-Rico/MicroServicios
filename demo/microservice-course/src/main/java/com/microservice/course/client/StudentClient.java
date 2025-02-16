@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.PathVariable;
 
 import com.microservice.course.dto.StudentDTO;
 
-@FeignClient(name = "msvc-student", url = "http://localhost:8090")
+@FeignClient(name = "msvc-student", url = "http://localhost:8080")
 public interface StudentClient {
     
     @GetMapping("student/api/student/search-by-course/{courseId}")

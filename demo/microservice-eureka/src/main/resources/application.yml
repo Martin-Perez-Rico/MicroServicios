@@ -15,3 +15,8 @@ eureka:
     fetch-registry: false
     service-url:
       defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+
+logging:
+  level:
+    com.netflix.discovery: DEBUG
+    org.springframework.web.client: DEBUG
