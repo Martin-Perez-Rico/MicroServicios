@@ -1,29 +1,5 @@
-server:
-  port: 8080
-
 spring:
   config:
     import: optional:configserver:http://localhost:8888
   application:
     name: msvc-gateway
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: true
-      routes:
-        - id: students
-          uri: 'http://localhost:8090'
-          predicates:
-            - Path=/student/api/student/**
-        - id: courses
-          uri: 'http://localhost:9090'
-          predicates:
-            - Path=/course/api/course/**
-
-eureka:
-  instance:
-    hostname: localhost
-  client:
-    service-url:
-      defaultZone: http://localhost:8761/eureka/
