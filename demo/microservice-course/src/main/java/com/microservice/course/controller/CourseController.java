@@ -14,7 +14,6 @@ import org.springframework.http.HttpStatus;
 
 import com.microservice.course.entities.Course;
 import com.microservice.course.service.ICourseService;
-import org.springframework.web.bind.annotation.RequestParam;
 
 
 @RestController

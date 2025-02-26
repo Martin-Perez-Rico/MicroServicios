@@ -3,3 +3,5 @@ spring:
     name: msvc-course
   config:
     import: optional:configserver:http://localhost:8888
+  profiles:
+    active: test
