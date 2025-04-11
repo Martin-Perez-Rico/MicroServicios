@@ -18,6 +18,24 @@ spring:
           uri: 'http://localhost:9090'
           predicates:
             - Path=/course/api/course/**
+  datasource:
+    url: jdbc:oracle:thin:@//localhost:1521/xe
+    username: root
+    password: 160004130
+    driver-class-name: oracle.jdbc.OracleDriver
+  jpa:
+    hibernate:
+      ddl-auto: drop-and-create
+    database-platform: org.hibernate.dialect.OracleDialect
+    database: oracle
+  security:
+    user:
+      name: admin
+      password: 1234
+
+logging:
+  level:
+    org.springframework.security: DEBUG
 
 eureka:
   client:
